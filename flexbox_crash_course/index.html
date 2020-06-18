@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        @media(min-width: 460px){
+            .container{
+            /* to displat the text using flexbox use below code */
+            display:flex;
+            /* align-items will align the box according to the size of the content */
+            /* align-items: flex-start;
+            align-items: flex-end; */
+            /* flex-direction=column will direct the box into columns */
+            flex-direction: row;
+        }
+        .container-2{
+            display:flex;
+            /* 
+             justify-content: flex-start;
+             justify-content: flex-end;
+             */
+            justify-content: space-between;
+            /*
+            flex-wrap: will wrap the content around the flexbox 
+             */
+
+        }
+
+        }
+        
+        .container div,.container-2 div{
+            border: 1px #cccccc solid;
+            padding:10px;
+        }
+        .flex-1{
+            /* if you wanna increase the size of the flexbox just increase the flex number */
+            flex:2;/* bsaically flex=2,3,4 will increase the size of the box one*/
+            order:2;/* changing the order will change the box order here box1 will be in middle*/
+
+        }
+        .flex-2{
+            flex:1;
+            order:1;
+        }
+        .flex-3{
+            flex:1;
+            order:3;
+
+        }
+       
+        .flex-4{
+            /* instead of width in flexbox we use flex basis */
+            flex-basis: 27%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-1">
+        
+            <h1>Box One</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+  
+    <div class="flex-2">
+     
+            <h1>Box Two</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+  
+    <div class="flex-3">
+     
+            <h1>Box Three</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+ 
+    </div>
+    <div class="container-2">
+        <div class="flex-4">
+        
+            <h1>Box Four</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eum asperiores cum mollitia vel dignissimos eaque non totam sequi, amet repudiandae illo accusantium omnis aliquid porro, adipisci commodi veniam exercitationem.</p>
+        </div>
+  
+    <div class="flex-4">
+     
+            <h1>Box Five</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum quibusdam, possimus voluptatem beatae hic maiores? Optio, magnam necessitatibus, magni vero temporibus repudiandae ipsum in et, modi explicabo officia impedit amet!</p>
+        </div>
+  
+    <div class="flex-4">
+     
+            <h1>Box Six</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus expedita rem autem quis dignissimos magnam? Eius obcaecati ullam aperiam, fugit quibusdam soluta ipsa, dicta labore, dignissimos facilis ea maxime deserunt!</p>
+        </div>
+ 
+    </div>
+</body>
+</html>
